@@ -30,10 +30,6 @@ This project simulates how energy providers can balance **production, consumptio
 - **Cloud Ready**: AWS (EKS, RDS)  
 
 ---
-
-## 📂 Project Structure
-builder-management-system/ ├── backend/ │ ├── src/main/java/com/buildermgmt/... │ ├── src/main/resources/ │ └── pom.xml ├── frontend/ │ ├── src/ │ └── package.json ├── docker/ │ ├── backend.Dockerfile │ ├── frontend.Dockerfile │ └── docker-compose.yml ├── k8s/ │ ├── deployment.yaml │ ├── service.yaml │ └── ingress.yaml └── README.md
-
 ## ⚙️ Running Locally
 
 ### 1. Clone the Repository
