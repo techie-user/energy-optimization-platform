@@ -32,3 +32,53 @@ This project simulates how energy providers can balance **production, consumptio
 ---
 
 ## 📂 Project Structure
+builder-management-system/ ├── backend/ │ ├── src/main/java/com/buildermgmt/... │ ├── src/main/resources/ │ └── pom.xml ├── frontend/ │ ├── src/ │ └── package.json ├── docker/ │ ├── backend.Dockerfile │ ├── frontend.Dockerfile │ └── docker-compose.yml ├── k8s/ │ ├── deployment.yaml │ ├── service.yaml │ └── ingress.yaml └── README.md
+
+## ⚙️ Running Locally
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/builder-management-system.git
+cd builder-management-system
+2. Backend Setup
+bash
+cd backend
+./mvnw clean install
+./mvnw spring-boot:run
+Backend runs on: http://localhost:8080
+
+3. Frontend Setup
+bash
+cd frontend
+npm install
+npm start
+Frontend runs on: http://localhost:4200
+
+4. Docker Compose (Optional)
+bash
+docker-compose up --build
+This spins up backend, frontend, and PostgreSQL together.
+
+5. Kubernetes Deployment (Optional)
+bash
+kubectl apply -f k8s/
+Deploys services to your cluster (tested with Minikube and AWS EKS).
+
+✅ Scalability Notes
+Stateless microservices allow horizontal scaling.
+
+PostgreSQL can be swapped with AWS RDS for production.
+
+RabbitMQ/Kafka integration ensures reliable event-driven communication.
+
+CI/CD pipeline ensures automated builds, tests, and deployments.
+
+📊 Future Enhancements
+Add machine learning module for resource optimization.
+
+Integrate Grafana + Prometheus for monitoring.
+
+Expand to multi-tenant architecture for multiple builders.
+
+👨‍💻 Author
+Mohamed — Senior Software Engineer | Java Technical Lead Passionate about building scalable enterprise systems with a focus on quality, performance, and collaboration.
